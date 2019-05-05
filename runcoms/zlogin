@@ -24,3 +24,6 @@
   fi
 
 } >&2
+
+# Print out a git tip (requires git-tip installed)
+git-tip
