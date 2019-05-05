@@ -12,5 +12,61 @@ fi
 
 # Customize to your needs...
 
-# Initialize fzf
+#Import aliaes
+source ~/.aliases
+#--End of Aliases--
+
+#--Functions--
+agnvim () {
+    CHOICE=$(ag --color $* | fzf -0 -1 --ansi)
+    if [ ! -z "$CHOICE" ]
+    then
+        nvim $( echo "$CHOICE" | awk 'BEGIN { FS=":" } { printf "+%d %s\n", $2, $1 } ') +"LAg! '$*'" "+wincmd k"
+    fi
+}
+
+# FileSearch
+function f() { find . -iname "*$1*" ${@:2} }
+function r() { grep "$1" ${@:2} -R . }
+
+#mkdir and cd
+function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+## Print out full command when use kubectl aliases
+function kubectl() { echo "+kubectl $@"; command kubectl $@; }
+
+# notation velocity
+n() {
+    $EDITOR ~/"Google Drive"/notes/"$*".txt
+}
+
+nls() {
+    ls -c ~/"Google Drive"/notes/ | grep "$*"
+}
+#--End of Functions--
+
+#--Initilize scripts--
+
+## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## GCloud CLI
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+## NodeJS
+### NVM
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## Python
+### Pyenv
+eval "$(pyenv init -)"
+### pipenv
+eval "$(pipenv --completion)"
+
+## Ruby
+### rbenv
+# eval "$(rbenv init -)"
+
+#--End of Initilize scripts--

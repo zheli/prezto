@@ -42,9 +42,21 @@ export PATH="$GOPATH/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Ruby
+## RVM
+### Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# NodeJS
+## NVM
+export NVM_DIR="$HOME/.nvm"
+
 # Scala
-## sbt
-SBT_OPTS="-Xmx1024M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+## SBT
+export SBT_OPTS="-Xmx1024M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+
+# SSH
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # zsh substring history search
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=red,fg=white,bold"
