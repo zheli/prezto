@@ -48,6 +48,8 @@ version is 4.3.11.
 
   5. Open a new Zsh terminal window or tab.
 
+  6. Install fzf https://github.com/junegunn/fzf
+
 ### Troubleshooting
 
 If you are not able to find certain commands after switching to *Prezto*,
