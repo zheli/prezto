@@ -53,7 +53,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Scala
 ## SBT
-export SBT_OPTS="-Xmx1024M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export SBT_OPTS="-Xmx1024M -XX:+CMSClassUnloadingEnabled"
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/rsa_id"

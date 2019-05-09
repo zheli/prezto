@@ -47,26 +47,36 @@ nls() {
 
 #--Initilize scripts--
 
-## fzf
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-## GCloud CLI
+# GCloud CLI
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-## NodeJS
-### NVM
+# NodeJS
+## NVM
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## Python
-### Pyenv
+# Python
+## Pyenv
 eval "$(pyenv init -)"
-### pipenv
+## pipenv
 eval "$(pipenv --completion)"
 
-## Ruby
-### rbenv
+# Ruby
+## rbenv
 # eval "$(rbenv init -)"
 
 #--End of Initilize scripts--
+
+#--Set environment--
+
+# Set maximum open file number higher
+# See
+# https://superuser.com/questions/433746/is-there-a-fix-for-the-too-many-open-files-in-system-error-on-os-x-10-7-1
+ulimit -S -n 2048
+ulimit -S -u 2048
+
+#--End of Set environment--
