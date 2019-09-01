@@ -47,6 +47,9 @@ export PATH=$JAVA_HOME/bin:$PATH
 ### Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # NodeJS
 ## NVM
 export NVM_DIR="$HOME/.nvm"

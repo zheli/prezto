@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 #Import aliaes
-source ~/.aliases
+source ~/.aliases.zsh
 #--End of Aliases--
 
 #--Functions--
@@ -68,6 +68,8 @@ eval "$(pipenv --completion)"
 # Ruby
 ## rbenv
 # eval "$(rbenv init -)"
+## rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 #--End of Initilize scripts--
 
@@ -76,7 +78,13 @@ eval "$(pipenv --completion)"
 # Set maximum open file number higher
 # See
 # https://superuser.com/questions/433746/is-there-a-fix-for-the-too-many-open-files-in-system-error-on-os-x-10-7-1
+ulimit -S -u 1418
 ulimit -S -n 2048
-ulimit -S -u 2048
+
+# Prompt
+## agnoster
+## Remove context from prompt
+AGNOSTER_PROMPT_SEGMENTS[2]=
+
 
 #--End of Set environment--
