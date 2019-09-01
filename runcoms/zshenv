@@ -37,9 +37,9 @@ export PATH="$GOPATH/bin:$PATH"
 
 # java
 # Use current java version from java_home
-#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home)
 # Use JDK8
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Ruby
