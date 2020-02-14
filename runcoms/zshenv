@@ -33,6 +33,7 @@ FZF_TMUX=1
 
 # GOLANG
 export GOPATH="$HOME/.local/golang"
+export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$GOPATH/bin:$PATH"
 
 # java
