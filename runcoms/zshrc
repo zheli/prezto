@@ -64,6 +64,8 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 eval "$(pyenv init -)"
 ## pipenv
 eval "$(pipenv --completion)"
+# Store env in project folder
+export PIPENV_VENV_IN_PROJECT=1
 
 # Ruby
 ## rbenv
