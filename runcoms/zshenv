@@ -43,6 +43,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Istio
+export PATH="$PATH:/Users/zhe/.local/istio-1.4.6/bin"
+
 # Ruby
 ## RVM
 ### Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
